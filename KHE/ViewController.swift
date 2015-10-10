@@ -15,16 +15,15 @@ let request = NSURLRequest(URL: pdfLoc)
 class ViewController: NSViewController {
     @IBOutlet weak var pdfWebView: WebView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         
         self.pdfWebView.mainFrame.loadRequest(request)
         self.pdfWebView.reload(request)
     }
     
-
     override var representedObject: AnyObject? {
         didSet {
         // Update the view, if already loaded.
