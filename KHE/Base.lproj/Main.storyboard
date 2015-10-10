@@ -770,6 +770,7 @@
                             <constraint firstItem="6z9-oA-qCm" firstAttribute="centerY" secondItem="ccG-E5-7fs" secondAttribute="centerY" id="dUO-fV-RWf"/>
                             <constraint firstItem="6z9-oA-qCm" firstAttribute="top" secondItem="ccG-E5-7fs" secondAttribute="top" id="fVg-Oh-kMx"/>
                             <constraint firstItem="ccG-E5-7fs" firstAttribute="top" secondItem="eNd-Px-8t3" secondAttribute="bottom" constant="8" symbolic="YES" id="fdL-U7-N2X"/>
+                            <constraint firstItem="eNd-Px-8t3" firstAttribute="width" secondItem="wHs-fz-3Ux" secondAttribute="height" multiplier="71:76" id="gOu-pU-cbf"/>
                             <constraint firstItem="eNd-Px-8t3" firstAttribute="leading" secondItem="ccG-E5-7fs" secondAttribute="leading" id="jGK-Mj-28G"/>
                             <constraint firstItem="6z9-oA-qCm" firstAttribute="centerY" secondItem="h3n-mf-Lyr" secondAttribute="centerY" id="lm6-C4-wJw"/>
                         </constraints>

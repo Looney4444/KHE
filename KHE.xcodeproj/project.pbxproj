@@ -16,6 +16,7 @@
 
 /* Begin PBXFileReference section */
 		AE2BE6471BC8B23A00A513B5 /* Test.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test.pdf; sourceTree = "<group>"; };
+		AE2BE6491BC8BFD300A513B5 /* Test.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = Test.ppt; sourceTree = "<group>"; };
 		AE886FFC1BC8A643003A344F /* KHE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KHE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE886FFF1BC8A643003A344F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE8870011BC8A643003A344F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		AE886FFE1BC8A643003A344F /* KHE */ = {
 			isa = PBXGroup;
 			children = (
+				AE2BE6491BC8BFD300A513B5 /* Test.ppt */,
 				AE2BE6471BC8B23A00A513B5 /* Test.pdf */,
 				AE886FFF1BC8A643003A344F /* AppDelegate.swift */,
 				AE8870011BC8A643003A344F /* ViewController.swift */,
@@ -189,7 +191,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -227,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
