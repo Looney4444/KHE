@@ -7,8 +7,10 @@
 //
 
 import Cocoa
+import WebKit
 
 class ViewController: NSViewController {
+    @IBOutlet var pdfWebView: WebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

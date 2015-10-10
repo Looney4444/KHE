@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="8191"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -684,10 +685,10 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="202" height="228"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="maxSize" width="160624" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="202" height="228"/>
-                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <size key="maxSize" width="160624" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -699,30 +700,45 @@
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ucs-gy-aaG">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ucs-gy-aaG">
                                     <rect key="frame" x="203" y="1" width="15" height="228"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DiV-ez-fjb">
-                                <rect key="frame" x="20" y="72" width="213" height="178"/>
-                            </customView>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccG-E5-7fs">
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="ccG-E5-7fs">
                                 <rect key="frame" x="20" y="16" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="haF-Tq-YCY"/>
+                                    <constraint firstAttribute="height" constant="48" id="vpO-5f-gxc"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSGoLeftTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Fzr-XT-YLS">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3n-mf-Lyr">
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="h3n-mf-Lyr">
                                 <rect key="frame" x="185" y="16" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="5eY-lX-ote"/>
+                                    <constraint firstAttribute="height" constant="48" id="NkO-Nw-a5k"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSGoRightTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="rDu-JQ-iD7">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6z9-oA-qCm">
+                            <webView identifier="pdfWebView" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Px-8t3">
+                                <rect key="frame" x="20" y="72" width="213" height="178"/>
+                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                            </webView>
+                            <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6z9-oA-qCm">
                                 <rect key="frame" x="102" y="16" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="gc6-7P-Ljn"/>
+                                    <constraint firstAttribute="width" constant="48" id="qhf-hY-kzc"/>
+                                </constraints>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusUnavailable" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3Xl-2L-XFx">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -730,11 +746,18 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ccG-E5-7fs" secondAttribute="bottom" constant="16" id="0f8-aZ-Yg3"/>
                             <constraint firstAttribute="bottom" secondItem="l8g-db-wZ5" secondAttribute="bottom" constant="20" id="7Cu-i3-DYH"/>
+                            <constraint firstItem="CQN-CJ-srj" firstAttribute="leading" secondItem="h3n-mf-Lyr" secondAttribute="trailing" constant="9" id="8nm-5v-vVw"/>
                             <constraint firstAttribute="trailing" secondItem="l8g-db-wZ5" secondAttribute="trailing" constant="20" id="9j1-cx-aoo"/>
                             <constraint firstItem="l8g-db-wZ5" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="KUl-Y3-llj"/>
+                            <constraint firstItem="ccG-E5-7fs" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Nif-wp-QBv"/>
+                            <constraint firstAttribute="bottom" secondItem="h3n-mf-Lyr" secondAttribute="bottom" constant="16" id="RjK-VX-xjM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pdfWebView" destination="eNd-Px-8t3" id="gbz-xq-wvV"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
